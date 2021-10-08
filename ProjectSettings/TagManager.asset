@@ -8,6 +8,7 @@ TagManager:
   - UnderGround
   - tile
   - DeleteTile
+  - Enemy
   layers:
   - Default
   - TransparentFX

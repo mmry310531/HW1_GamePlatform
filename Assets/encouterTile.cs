@@ -8,7 +8,7 @@ public class encouterTile : MonoBehaviour
     {
         if(collision.tag == "tile")
         {
-            Debug.Log("hellO");
+            //Debug.Log("hellO");
             Destroy(collision.gameObject);
         }
     }
