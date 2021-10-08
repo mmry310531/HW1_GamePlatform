@@ -9,6 +9,7 @@ TagManager:
   - tile
   - DeleteTile
   - Enemy
+  - Sword
   layers:
   - Default
   - TransparentFX
