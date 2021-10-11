@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OutScene : MonoBehaviour
 {
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Monster" && tag == "Player")
@@ -23,11 +24,7 @@ public class OutScene : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if(tag == "Sword" && collision.tag == "Enemy")
-        {
-            //Debug.Log("hello");
-            collision.gameObject.GetComponent<Health>().GetHurt = true;
-        }
+
 
     }
 }

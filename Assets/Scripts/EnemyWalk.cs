@@ -21,24 +21,37 @@ public class EnemyWalk : MonoBehaviour
     void Update()
     {
         
-        if((Originalposition - transform.position).magnitude >= walkDistance){
-            if (direction)
-            {
-                direction = false;
-            }
-            else
-            {
-                direction = true;
-            }
-        }
+
 
         if (direction)
         {
+            if ((Originalposition.x - transform.position.x) >= walkDistance)
+            {
+                if (direction)
+                {
+                    direction = false;
+                }
+                else
+                {
+                    direction = true;
+                }
+            }
             renderer.flipX = false;
             transform.position += new Vector3(-1, 0, 0) * Time.deltaTime * speed;
         }
         else
         {
+            if ((Originalposition.x - transform.position.x) <= -walkDistance)
+            {
+                if (direction)
+                {
+                    direction = false;
+                }
+                else
+                {
+                    direction = true;
+                }
+            }
             renderer.flipX = true;
             transform.position += new Vector3(1, 0, 0) * Time.deltaTime * speed;
         }

@@ -79,6 +79,13 @@ namespace Spine.Unity.Examples {
 		float forceCrouchEndTime;
 		bool wasGrounded = false;
 
+
+		// TODO;
+		//public GameObject enemy;
+		//public Health enemyHealth;
+		//public OutScene outscene;
+		public bool attackSignal;
+		
 		CharacterState previousState, currentState;
 		public bool attack;
 		void Update () {
@@ -170,7 +177,8 @@ namespace Spine.Unity.Examples {
                     if (attack)
                     {
 						currentState = CharacterState.Attack;
-                    }
+						attackSignal = true;
+					}
 					else if (input.x == 0)
 						currentState = CharacterState.Idle;
 					else
